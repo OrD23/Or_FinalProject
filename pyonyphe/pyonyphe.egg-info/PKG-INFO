@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: pyonyphe
+Version: 2.0
+Home-page: https://github.com/sebdraven/pyonyphe
+Author: Sebastien Larinier
+Author-email: slarinier@gmail.com
+License: MIT
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
