@@ -1,0 +1,14 @@
+.landing-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.landing-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.landing-container button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

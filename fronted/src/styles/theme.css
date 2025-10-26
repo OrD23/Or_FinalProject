@@ -1,0 +1,129 @@
+/* src/styles/theme.css */
+/* Default (light) theme variables */
+:root {
+  --bg-color: #fff;
+  --text-color: #007bff;  /* Blue text on white background */
+  --border-color: #ccc;         /* Blue text on white background */
+  --container-bg: #f4f7f9;
+  --button-bg: #007bff;          /* Blue button background */
+  --button-bg-hover: #0056b3;
+  --input-bg: #fff;
+}
+
+/* Dark theme overrides */
+.dark-theme {
+  --bg-color: #000;
+  --text-color: #fff;     /* White text on black background */
+  --border-color: #fff;         /* White text on black background */
+  --container-bg: #111;
+  --button-bg: transparent;
+  --button-bg-hover: #fff;
+  --input-bg: #000;
+}
+
+/* Global resets and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Buttons: force white text for all buttons */
+button {
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: #fff; /* Always white */
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-bg-hover);
+  color: #fff;
+}
+
+.dark-theme button:hover {
+  color: #000;
+}
+
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1em;
+  color: var(--text-color);
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(--button-bg);
+  outline: none;
+}
+
+/* Containers for pages */
+.auth-container,
+.landing-container,
+.search-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.landing-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Headings: use var(--text-color) for both themes */
+h1, h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+/* Labels */
+label {
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Link styling */
+a {
+  color: var(--button-bg);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--button-bg-hover);
+}

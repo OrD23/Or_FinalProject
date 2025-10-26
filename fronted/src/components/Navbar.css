@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background: var(--bg-color);
+  z-index: 1000;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  flex: 1;
+}
+
+.navbar-left {
+  text-align: left;
+}
+
+.navbar-center {
+  text-align: center;
+}
+
+.navbar-center button + button {
+  margin-left: 0.5rem;
+}
+
+.navbar-right {
+  text-align: right;
+}
+
+.navbar-right .logout {
+  margin-right: 0.5rem;
+}

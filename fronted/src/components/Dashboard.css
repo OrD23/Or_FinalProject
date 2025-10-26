@@ -1,0 +1,116 @@
+/* src/components/Dashboard.css */
+
+/* Global resets */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  padding: 1rem;
+  background-color: #ffffff;  /* light mode background */
+  color: #333333;             /* light mode text */
+}
+
+/* Dark-mode override (when you toggle) */
+body.dark-theme .dashboard-container {
+  background-color: #1e1e1e;
+  color: #dddddd;
+}
+
+/* Rows spacing */
+.dashboard-top,
+.dashboard-middle,
+.dashboard-bottom {
+  margin-bottom: 1.5rem;
+}
+
+/* Middle row: three pie charts side-by-side */
+.dashboard-middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Constrain chart height */
+.chart-container {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+/* Bottom row */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  overflow: auto;
+}
+
+.list-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* PDF button wrapper – centers the button */
+.pdf-button-container,
+.scan-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* PDF button – light mode */
+.pdf-button {
+  background-color: #007acc;  /* light mode default */
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.pdf-button:hover {
+  background-color: #005fa3;  /* light mode hover */
+}
+
+/* Dark-mode PDF button */
+body.dark-theme .pdf-button {
+  background-color: #000000;  /* dark mode default */
+  color: #ffffff;
+}
+/* Dark-mode PDF hover: white background, black text */
+body.dark-theme .pdf-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ———————————————————————————————— */
+/* Critical-vuln text in list (light mode) */
+/* make every <li> in the “Top Critical Vulnerabilities” list blue in light mode */
+body:not(.dark-theme) .list-container li {
+  color: #007acc;
+}
+
+/* Light-mode: Top Critical Vulnerabilities heading and items in blue */
+body:not(.dark-theme) .list-container h3,
+body:not(.dark-theme) .list-container li {
+  color: #007acc;
+}
+
+.scan-info span {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+
+/* theme-aware text color */
+body.dark-theme .scan-info {
+  color: #dddddd;
+}
+
+/* light-mode (default) */
+body:not(.dark-theme) .scan-info {
+  color: #333333;
+}

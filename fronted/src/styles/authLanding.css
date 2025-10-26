@@ -1,0 +1,122 @@
+/* src/styles/authLanding.css */
+/* Global resets and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: #000;  /* Black background */
+  color: #fff;             /* White text */
+}
+
+/* Common styling for buttons */
+button {
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent so the container's dark background shows */
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #000;  /* Black background for input */
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #fff;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+/* Containers for pages */
+
+/* For Login and SignUp forms */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #111;  /* Dark grey container */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);  /* White shadow for a subtle glow */
+}
+
+/* Landing page container */
+.landing-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/* Search form container */
+.search-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.search-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+/* Labels */
+label {
+  font-size: 0.9em;
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Additional link styling */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #aaa;
+}

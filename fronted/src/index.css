@@ -1,0 +1,38 @@
+/* src/index.css */
+
+/* index.css */
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* default light */
+  color: #333333;
+}
+
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* global dark mode page background */
+body.dark-theme,
+html.dark-theme,
+#root.dark-theme {
+  background-color: #1e1e1e;
+  color: #ddd;  /* dark mode text color */
+}
+
+.dark-theme {
+  background-color: #1e1e1e !important;
+  color: #ddd !important;
+}
